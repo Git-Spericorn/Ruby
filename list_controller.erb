@@ -1,0 +1,7 @@
+class ListController < ApplicationController
+
+  # List all users
+
+  def all_users
+    @users = Users.where("id IS NOT NULL").order('id DESC')
+  end
